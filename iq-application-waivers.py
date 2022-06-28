@@ -15,8 +15,8 @@ def getArguments():
     global iq_url, iq_session, iq_auth
     parser = argparse.ArgumentParser(description='List waivers for an application')
     parser.add_argument('-i', '--app', help='Name of the Application you want to list waivers for', required=True)
-    parser.add_argument('-u', '--url', help='eg. http://localhost:8070', required=True)
-    parser.add_argument('-a', '--auth', help='eg. admin:admin123', required=True)
+    parser.add_argument('-u', '--url', help='IQ Server URL eg. http://localhost:8070', required=True)
+    parser.add_argument('-a', '--auth', help='Username and Password for the user you want to connect as eg. admin:password', required=True)
     args = vars(parser.parse_args())
     iq_url = args["url"]
     creds = args["auth"].split(":")
